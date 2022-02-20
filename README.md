@@ -28,6 +28,12 @@ Relevant papers cited by the UCI Machine Learning Repository [[1]](#1) [[2]](#2)
 * Distributions of numerical features were visualised.
 * Correlation between dependent and independent variables were calculated.
 
+![RENTED BIKE VS MONTHS](Images/rented_bikes_vs_months.png)
+![RENTED BIKE VS HOURS](Images/rented_bikes_vs_hour.png)
+![RENTED BIKE VS SNOWFALL](Images/bike_count_vs_snowfall.png)
+![RENTED BIKE VS RAINFALL](Images/bike_count_vs_rainfall.png)
+![CORRELATION HEATMAP](Images/correlation_heat_map.png)
+
 ## Model Fitting
 #### Linear Regression Model
 * Label encoding and one hot encoding was done on categorical variables.
@@ -54,6 +60,10 @@ X_test = scaler.transform(X_test)
 linear_regressor = LinearRegression()
 linear_regressor.fit(X_train, y_train)
 
+# prediction using the model
+y_pred = linear_regressor.predict(X_test)
+y_train_pred = linear_regressor.predict(X_train)
+
 # Performance metrics for testing data
 # root mean squared error
 print('RMSE:', math.sqrt(mean_squared_error(y_test, y_pred)))
@@ -66,13 +76,72 @@ print('RMSE:', math.sqrt(mean_squared_error(y_train, y_train_pred)))
 # r2 score
 print('R2 score:', r2_score(y_train, y_train_pred))
 ```
+Performance metrics for Testing dataset \
+RMSE: 454.3735647954152 \
+R2 score: 0.5117558744340127
 
-#### Decision Tree Regressor
+Performance metrics for Training dataset \
+RMSE: 436.9096921808084 \
+R2 score: 0.534370487444807
+
+![LINEAR REGRESSION ERROR PLOT](Images/lin_reg_error_plot.png)
+
+#### Decision Tree Regression Model
 * label encoding was done as Scikit-learn decision tree regressor does not support categorical variables.
 * GridSearchCV was used for hyperparameter tuning and cross validation.
 * The model was fit and the target variable predictions were made.
 * Model performance was evaluated.
 * The best hyperparameter combination (as given by GridSearchCV) was used to train a Decision Tree model in order to visualise the Tree.
+
+```markdown
+from sklearn.tree import DecisionTreeRegressor
+from sklearn.model_selection import GridSearchCV
+
+# GridSearchCV for hyperparameter tuning
+decision_tree_reg = DecisionTreeRegressor()
+grid_parameters = {"max_depth": [3, 5, 7], "max_leaf_nodes": [None, 50, 60, 70, 80, 90], "min_samples_leaf":[7,8,9,10]}
+regressor_model = GridSearchCV(decision_tree_reg, param_grid = grid_parameters, scoring = 'neg_mean_squared_error', cv = 5)
+
+# fitting the model
+regressor_model.fit(X_train2, y_train2)
+```
+Performance metrics for Testing dataset \
+r2 score: 0.7805191405790043 \
+RMSE: 304.0104231418782
+
+Performance metrics for Training dataset \
+r2 score: 0.8328601459379475 \
+RMSE: 261.2260801680112
+
+![DECISION TREE GRIDSEARCH ERROR PLOT](Images/decision_tree_GSCV_reg_error_plot.png)
+
+```markdown
+# best hyperparameters
+regressor_model.best_params_
+```
+'max_depth': 7, 'max_leaf_nodes': None, 'min_samples_leaf': 8
+
+#### Decision Tree Visualisation
+A single decision tree model is trained using the best hyperparameter combination.
+
+```markdown
+# fitting the model
+decision_tree_model = DecisionTreeRegressor(max_depth = 7, max_leaf_nodes = None, min_samples_leaf = 8)
+decision_tree_model.fit(X_train2, y_train2)
+
+# visualising decision tree
+from sklearn.tree import export_graphviz
+import graphviz
+from IPython.display import Image
+
+dot_data = export_graphviz(decision_tree_model, feature_names=X_train2.columns, filled=True, out_file=None)
+graph = graphviz.Source(dot_data)
+png_img = graph.pipe(format='png')
+Image(png_img)
+```
+#### Decision Tree
+Click on the tree to enlarge:
+![DECISION TREE VISUALISATION](Images/decision_tree_viz.png)
 
 ## Conclusions
 #### Exploratory Data Analysis
