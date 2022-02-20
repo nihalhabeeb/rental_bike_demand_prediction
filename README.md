@@ -14,7 +14,7 @@ The aim is to predict the demand of rental bikes at any given hour using the wea
 #### Data Source
 The dataset was obtained from UCI Machine Learning Repository. [CLICK HERE](https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand)
 
-Relevant papers cited by the UCI Machine Learning Repository [[1]](#1) [[2]](#2).
+Relevant papers mentioned in the UCI Machine Learning Repository page [[1]](#1) [[2]](#2).
 
 #### Data Preparation
 * The dataset column names were simplified.
@@ -84,10 +84,11 @@ Performance metrics for Training dataset \
 RMSE: 436.9096921808084 \
 R2 score: 0.534370487444807
 
+##### Comparison between actual and predicted values
 ![LINEAR REGRESSION ERROR PLOT](Images/lin_reg_error_plot.jpg)
 
 #### Decision Tree Regression Model
-* label encoding was done as Scikit-learn decision tree regressor does not support categorical variables.
+* Label encoding was done as Scikit-learn decision tree regressor does not support categorical variables.
 * GridSearchCV was used for hyperparameter tuning and cross validation.
 * The model was fit and the target variable predictions were made.
 * Model performance was evaluated.
@@ -113,6 +114,7 @@ Performance metrics for Training dataset \
 r2 score: 0.8328601459379475 \
 RMSE: 261.2260801680112
 
+##### Comparison between actual and predicted values
 ![DECISION TREE GRIDSEARCH ERROR PLOT](Images/decision_tree_GSCV_reg_error_plot.jpg)
 
 ```markdown
