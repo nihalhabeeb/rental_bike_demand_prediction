@@ -32,6 +32,7 @@ Relevant papers mentioned in the UCI Machine Learning Repository page [[1]](#1) 
 ![RENTED BIKE VS HOURS](Images/rented_bikes_vs_hour.jpg)
 ![RENTED BIKE VS SNOWFALL](Images/bike_count_vs_snowfall.jpg)
 ![RENTED BIKE VS RAINFALL](Images/bike_count_vs_rainfall.jpg)
+
 ![CORRELATION HEATMAP](Images/correlation_heat_map.jpg)
 
 ## Model Fitting
