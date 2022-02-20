@@ -152,10 +152,12 @@ Click [HERE](https://github.com/nihalhabeeb/rental_bike_demand_prediction/blob/m
 * There was a weak linear relationship with some of the variables. However, there was high standard deviation and high heteroskedasticity.
 * Rainfall and snowfall variables had a non linear relationship with rented bike counts.
 * The distribution of the dependent variable was skewed.
+
 #### Linear Regression
 * The model had an R2 score (Coefficient of determination) of 0.51 on testing set and 0.53 on training set i.e the model is able to explain around 51% of the variation in the predicted variable.
 * The root mean squared error was found to be 454.37 on testing set and 436.90 on training set.
 * The performance of the model on testing and training datset is fairly similar.
+
 #### Decision Tree Regression
 * The hyperparameter tuned model gave an R2 score of 0.779 on testing set and 0.832 on training set.
 * The root mean squared error was 304.42 on testing set and 261.22 on training set.
