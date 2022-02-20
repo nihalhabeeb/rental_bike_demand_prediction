@@ -36,6 +36,37 @@ Relevant papers cited by the UCI Machine Learning Repository [[1]](#1) [[2]](#2)
 * The model was fit and the target variable predictions were made.
 * Model performance was evaluated.
 
+```markdown
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.linear_model import LinearRegression
+from sklearn.metrics import r2_score, mean_squared_error
+
+# splitting data into training and testing set
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size = 0.2, random_state = 4)
+
+# scaling the data
+scaler = MinMaxScaler()
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+# fitting the model
+linear_regressor = LinearRegression()
+linear_regressor.fit(X_train, y_train)
+
+# Performance metrics for testing data
+# root mean squared error
+print('RMSE:', math.sqrt(mean_squared_error(y_test, y_pred)))
+# r2 score
+print('R2 score:', r2_score(y_test, y_pred))
+
+# Performance metrics for training data
+# root mean squared error
+print('RMSE:', math.sqrt(mean_squared_error(y_train, y_train_pred)))
+# r2 score
+print('R2 score:', r2_score(y_train, y_train_pred))
+```
+
 #### Decision Tree Regressor
 * label encoding was done as Scikit-learn decision tree regressor does not support categorical variables.
 * GridSearchCV was used for hyperparameter tuning and cross validation.
