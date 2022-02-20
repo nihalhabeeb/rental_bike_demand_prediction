@@ -140,7 +140,7 @@ png_img = graph.pipe(format='png')
 Image(png_img)
 ```
 #### Decision Tree
-Click on the image to enlarge:
+Click [HERE](https://github.com/nihalhabeeb/rental_bike_demand_prediction/blob/main/Images/decision_tree_viz.jpg) to enlarge Image:
 ![DECISION TREE VISUALISATION](Images/decision_tree_viz.jpg)
 
 ## Conclusions
