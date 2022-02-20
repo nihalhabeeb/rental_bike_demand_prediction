@@ -28,11 +28,11 @@ Relevant papers cited by the UCI Machine Learning Repository [[1]](#1) [[2]](#2)
 * Distributions of numerical features were visualised.
 * Correlation between dependent and independent variables were calculated.
 
-![RENTED BIKE VS MONTHS](Images/rented_bikes_vs_months.png)
-![RENTED BIKE VS HOURS](Images/rented_bikes_vs_hour.png)
-![RENTED BIKE VS SNOWFALL](Images/bike_count_vs_snowfall.png)
-![RENTED BIKE VS RAINFALL](Images/bike_count_vs_rainfall.png)
-![CORRELATION HEATMAP](Images/correlation_heat_map.png)
+![RENTED BIKE VS MONTHS](Images/rented_bikes_vs_months.jpg)
+![RENTED BIKE VS HOURS](Images/rented_bikes_vs_hour.jpg)
+![RENTED BIKE VS SNOWFALL](Images/bike_count_vs_snowfall.jpg)
+![RENTED BIKE VS RAINFALL](Images/bike_count_vs_rainfall.jpg)
+![CORRELATION HEATMAP](Images/correlation_heat_map.jpg)
 
 ## Model Fitting
 #### Linear Regression Model
@@ -84,7 +84,7 @@ Performance metrics for Training dataset \
 RMSE: 436.9096921808084 \
 R2 score: 0.534370487444807
 
-![LINEAR REGRESSION ERROR PLOT](Images/lin_reg_error_plot.png)
+![LINEAR REGRESSION ERROR PLOT](Images/lin_reg_error_plot.jpg)
 
 #### Decision Tree Regression Model
 * label encoding was done as Scikit-learn decision tree regressor does not support categorical variables.
@@ -113,7 +113,7 @@ Performance metrics for Training dataset \
 r2 score: 0.8328601459379475 \
 RMSE: 261.2260801680112
 
-![DECISION TREE GRIDSEARCH ERROR PLOT](Images/decision_tree_GSCV_reg_error_plot.png)
+![DECISION TREE GRIDSEARCH ERROR PLOT](Images/decision_tree_GSCV_reg_error_plot.jpg)
 
 ```markdown
 # best hyperparameters
@@ -140,8 +140,8 @@ png_img = graph.pipe(format='png')
 Image(png_img)
 ```
 #### Decision Tree
-Click on the tree to enlarge:
-![DECISION TREE VISUALISATION](Images/decision_tree_viz.png)
+Click on the image to enlarge:
+![DECISION TREE VISUALISATION](Images/decision_tree_viz.jpg)
 
 ## Conclusions
 #### Exploratory Data Analysis
