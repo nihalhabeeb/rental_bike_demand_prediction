@@ -11,13 +11,13 @@ For a bike renting system to smoothly function, it is necessary to provide a sta
 
 View the complete notebook [HERE](https://github.com/nihalhabeeb/rental_bike_demand_prediction/blob/main/Seoul_Bike_Demand.ipynb)
 
-## Objective
-The aim is to predict the demand of rental bikes at any given hour using the weather and date information provided in the dataset.
-
 #### Data Source
 The dataset was obtained from UCI Machine Learning Repository [GO TO SOURCE](https://archive.ics.uci.edu/ml/datasets/Seoul+Bike+Sharing+Demand).
 
 Relevant papers mentioned in the UCI Machine Learning Repository page [[1]](#1) [[2]](#2).
+
+## Objective
+The aim is to predict the demand of rental bikes at any given hour using the weather and date information provided in the dataset.
 
 #### Data Preparation
 * The dataset column names were simplified.
