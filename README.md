@@ -86,6 +86,8 @@ RMSE: 436.9096921808084 \
 R2 score: 0.534370487444807
 
 ##### Comparison between actual and predicted values
+Comparing the values visually using a snippet (first 50 values) of the actual and predicted values.
+
 ![LINEAR REGRESSION ERROR PLOT](Images/lin_reg_error_plot.jpg)
 
 #### Decision Tree Regression Model
@@ -116,6 +118,8 @@ r2 score: 0.8328601459379475 \
 RMSE: 261.2260801680112
 
 ##### Comparison between actual and predicted values
+Comparing the values visually using a snippet (first 50 values) of the actual and predicted values.
+
 ![DECISION TREE GRIDSEARCH ERROR PLOT](Images/decision_tree_GSCV_reg_error_plot.jpg)
 
 ```markdown
