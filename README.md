@@ -1,6 +1,5 @@
-[HOME](https://nihalhabeeb.github.io/)
-
 # Rental Bike Demand Prediction
+[Back to HOME](https://nihalhabeeb.github.io/)
 
 For a bike renting system to smoothly function, it is necessary to provide a stable supply of rental bikes at any given point of time according to the demand. This requires having a good prediction of the bike demand at each hour. I am working with a dataset of bike rental counts in the city of Seoul, South Korea which contains historical data on date and weather information (Temperature, Humidity, Windspeed, Visibility, Dewpoint, Solar radiation, Snowfall, Rainfall).
 
